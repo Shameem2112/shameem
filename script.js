@@ -21,3 +21,15 @@ tl.to("#place h2",{
     yoyo:true,
 
 })
+gsap.from("#technical h4",{
+    x:-10,
+    repeat:-1,
+    duration:1,
+    yoyo:true,
+})
+gsap.to("#education h3",{
+    y:150,
+    repeat:-1,
+    duration:1.5,
+    yoyo:true,
+})
