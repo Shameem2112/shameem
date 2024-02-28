@@ -19,24 +19,30 @@ html, body{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 30px 40px;
+    padding: 1vw 1vh;
+    /* flex-wrap: wrap; */
 
 }
 #nav h3{
     background-color: black;
     color:#fff;
-    padding: 10px 20px;
-    font-size: 18px;
-    border-radius: 50px;
-    margin-left: 5px;
+    padding: 0.1vw 20vh;
+    font-size:2vw;
+    border-radius: 5px;
+    margin-left:9vw;
+}
+@media screen and (max-width: 479px)
+ #nav{
+    letter-spacing: -1px;
+    font-size: 3.5rem;
 }
 #intro{
     height: 45%;
     width: 100%;
-    padding: 55px 60px;
+    padding: 5vw 6vw;
 }
 #intro h1{
-    font-size: 110px;
+    font-size: 6vw;
     letter-spacing: -3px;
     line-height: 100px;
 
@@ -184,7 +190,6 @@ html, body{
     
 }
 #technical h4{
-    border-right: 2px solid black;
     font-size: 30px;
     padding-right: 20px;
     width: 20%;
@@ -198,6 +203,8 @@ html, body{
     font-weight: 100;
     width: 80%;
     padding-left: 15px;
+    border-left: 2px solid black;
+
 }
 #education{
     height: 40%;
@@ -209,8 +216,12 @@ html, body{
 #education h3{
     width: 30%;
     font-size: 30px;
-    border-right: 2px solid black;
     padding: 40px 20px;
+}
+#educations{
+    border-left: 2px solid black;
+
+
 }
 #educations h4{
     font-size: 25px;
