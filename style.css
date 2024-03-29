@@ -25,13 +25,13 @@ html, body{
 }
 #nav h3{
     background-color: black;
-    color:#fff;
-    padding: 0.1vw 20vh;
+    color:#fcf9f9;
+    padding: 1vw 2vh;
     font-size:2vw;
     border-radius: 5px;
     margin-left:9vw;
 }
-@media screen and (max-width: 479px)
+@media screen and (max-width: 600px)
  #nav{
     letter-spacing: -1px;
     font-size: 3.5rem;
@@ -64,14 +64,16 @@ html, body{
     background-image: url("img1.jpeg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 100% 100%;
 }
 #about{
-    height: 40%;
-    width: 100%;
+    height: 100;
+    width:100% ;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 30px;
+    flex-wrap: wrap;
 }
 #about h2{
     width: 70%;
@@ -105,34 +107,31 @@ html, body{
 }
 
 #work{
-    height: 55%;
-    width: 100%;
+    height: 55;
+    width: 100;
     border-top:2px solid black ;
     display: flex;
     padding:50px 60px;
-
 }
 #work-one{
-    width: 30%;
-    height: 100%;
+    width: 25vw;
     border-right:2px solid black ;
     display: flex;
-    padding-right: 40px;
+    padding-right:1vw;
     justify-content: space-between;
     
     
 }
 #work-one h3{
-    font-size: 25px;
+    font-size: 1.3em;
     font-weight: 400;
 }
 #work-one i{
-    font-size: 25px;
+    font-size: 2em;
 }
 
 #work-two{
-    width: 65%;
-    height: 100%;
+    width: 65vw;
     padding: 0 60px;
 }
     
@@ -207,7 +206,7 @@ html, body{
 
 }
 #education{
-    height: 40%;
+    height: 40;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -220,23 +219,18 @@ html, body{
 }
 #educations{
     border-left: 2px solid black;
-
-
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 100px;
+    gap: 4vw;
 }
 #educations h4{
     font-size: 25px;
     font-weight: 500;
 }
 
-
-#educations{
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    padding: 50px 100px;
-    gap: 20%;
-}
-pre{
+p{
     font-size: 20px;
 }
 @keyframes move {
@@ -247,5 +241,271 @@ pre{
       transform: translateX(-200px); /* Adjust the value to the distance you want to move */
     }
   }
+ #footer{
+    height: 30;
+    width: 100%;
+    position:relative ;
+    border-top: 2px solid #000;
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+    color: #fff;
+    
+    
+
+ }
+ #footer1{
+    height: 30%;
+    width: 70%;
+    border-right: 2px solid #fff;
+    
+ }
+ #footer1 h3{
+    font-size: 3em;
+ }
+
+ #form{
+    display: inline-block;
+    margin-top: 1.5vw;
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    gap: 1vw;
+    flex-direction:column ; 
+    margin-left: 1vw;
+    font-size:1vw;
+    font-weight: 500;
+
+ }
+ input{
+    font-size: 2em;
+ }
+ textarea{
+    font-size: 2.6em;
+
+ }
+ #submitBtn{
+    font-size: 2em;
+    margin-left: 4em;
+    background-color: #fff;
+    
+ }
+ #footer2{
+    gap: 1em;
+    margin: 2em;
+    text-decoration: none;
+    font-size: 2em;
+ }
+ #footer2 a{
+    text-decoration: none;
+    color: #fff;
+ }
+ #footer2 a:hover{
+    color: gray;
+ }
+  
+
+
+
+
+ @media only screen and (max-width: 600px) {
+    #nav {
+        width: 100%;
+        height: 8vw;
+        display: flex;
+        justify-content: flex-start;
+        
+    }
+    #nav h3{
+        font-size: 4vw;
+        display: none;
+    }
+    #intro h1{
+        font-size: 6vw;
+        letter-spacing: -2px;
+        line-height: 55px;
+        margin-top: 2vw;
+    
+    }
+    #place h3,#place h2{
+        font-size:5vw;
+        font-weight: 600;
+    
+    }
+    #place{
+        margin-top:5vw;
+        display: flex;
+        align-items: center;
+        justify-content:flex-start;
+    }
+    #place h2{
+        margin-left: 18vw;
+    }
+    #hero-img{
+        height: 70%;
+        width: 100%;
+        background-image: url("img2.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+    }
+    #intro{
+        height:28%;
+    }
+    #work{
+        /* height: 30%; */
+        width: 100vw;
+        flex-direction: column;
+    }
+    #work-one h3{
+        font-size:8vw;
+        font-weight: 400;
+    }
+    #work-one i{
+        font-size:6.3vw;
+        display: none;
+    }
+    #work-one{
+        border-right: none;
+        border-bottom: 2px solid black;
+        width: 100%;
+    }
+    #work{
+        width: 100%;
+        border-top:2px solid black ;
+        padding:1vw 2vw;
+    }
+    #work-two{
+        padding: 0;
+    }
+    .work2-part{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:1vw 0;
+        flex-wrap: wrap;
+    }
+    .work2-part:nth-child(1){
+        border-bottom: 2px solid #000;
+    }
+    .work2-part .elem{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .work2-part .elem:nth-child(1){
+        border-right:none;
+        padding-right:30vw;
+        border-bottom: 2px solid black;
+
+    }
+    .work2-part .elem:nth-child(2){
+        padding-left: 1vw;
+    }
+    .work2-part .elem h4{
+        font-size: 7vw;
+        margin-bottom: 10px;
+        font-weight: 500;
+    
+    }
+    .work2-part .elem p{
+        font-size: 5vw;
+        font-weight: 400;
+    }
+    #code1{
+        font-size: 6vw;
+    }
+    #technical{
+        flex-direction: column;
+        height:45%;
+    }
+    #technical h4{
+        font-size: 9vw;
+        width: 100%;
+        justify-content: flex-start;
+        
+    
+    }
+    #down{
+        display: block;
+        text-align: center;
+    }
+    #side{
+        display: none;
+    }
+    #technical-skill{
+        flex-direction: column;
+        gap: 1vw;
+        justify-content: flex-start;
+        gap: 2vw;
+        border: none;
+        width: 100%;
+    }
+    #education{
+        
+        flex-direction: column;
+    }
+    #education h3{
+        width: 30%;
+        font-size: 8vw;
+        padding:1vw 2vw;
+    }
+    #education h3 i{
+        display: none;
+    }
+    #educations{
+        border-left:none;
+        
+        flex-direction: column;
+        padding:1vw 2vw;
+        gap: 20%;
+    }
+    #educations h4{
+        font-size: 6vw;
+        font-weight: 500;
+    }
+    
+    p{
+        font-size:5vw;
+    }
+    #footer{
+        flex-direction: column;
+    }
+    #footer1{
+        width: 100%;
+        border-right: none;
+        
+     }
+     #form{
+        display: inline-block;
+        margin-top: 1.5vw;
+        display: flex;
+        align-items:flex-start;
+        justify-content: space-between;
+        gap: 1vw;
+        flex-direction:column ; 
+        margin-left: 1vw;
+        font-size:3vw;
+        font-weight: 500;
+    
+     }
+     
+     textarea{
+        font-size:6.5vw;
+    
+     }
+     #footer2{
+        gap: 1em;
+        margin: 2em;
+        text-decoration: none;
+        font-size: 5vw;
+     }
+     
+     
+
+ }
+
   
   
