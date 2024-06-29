@@ -31,7 +31,6 @@ html, body{
     border-radius: 5px;
     margin-left:9vw;
 }
-@media screen and (max-width: 600px)
  #nav{
     letter-spacing: -1px;
     font-size: 3.5rem;
@@ -311,6 +310,11 @@ p{
 
 
  @media only screen and (max-width: 600px) {
+    .education{
+        border-bottom: 2px solid black;
+        width: 100%;
+    }
+
     #nav {
         width: 100%;
         height: 8vw;
@@ -324,7 +328,7 @@ p{
     }
     #intro h1{
         font-size: 6vw;
-        letter-spacing: -2px;
+        letter-spacing: -1px;
         line-height: 55px;
         margin-top: 2vw;
     
@@ -346,10 +350,12 @@ p{
     #hero-img{
         height: 70%;
         width: 100%;
-        background-image: url("img2.jpg");
-        background-repeat: no-repeat;
+        background-image: url("https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29tcHV0ZXJ8ZW58MHx8MHx8fDA%3D");
+        /* background-repeat: no-repeat;
         background-position: center;
-        background-size: 100% 100%;
+        background-size: 100% 100%; */
+        object-fit: cover;
+        filter: grayscale();
     }
     #intro{
         height:28%;
@@ -379,6 +385,7 @@ p{
     }
     #work-two{
         padding: 0;
+        width: 100%;
     }
     .work2-part{
         display: flex;
@@ -448,9 +455,10 @@ p{
         flex-direction: column;
     }
     #education h3{
-        width: 30%;
+        width: 100%;
         font-size: 8vw;
         padding:1vw 2vw;
+        font-weight: 700;
     }
     #education h3 i{
         display: none;
@@ -459,8 +467,9 @@ p{
         border-left:none;
         
         flex-direction: column;
-        padding:1vw 2vw;
-        gap: 20%;
+        padding:10vw 2vw;
+        width: 100%;
+        
     }
     #educations h4{
         font-size: 6vw;
@@ -470,6 +479,7 @@ p{
     p{
         font-size:5vw;
     }
+    
     #footer{
         flex-direction: column;
     }
@@ -502,6 +512,33 @@ p{
         text-decoration: none;
         font-size: 5vw;
      }
+     #about{
+     flex-direction: column;
+    }
+    #about h2{
+        width:100%;
+        font-size:5vw;
+        line-height:10vw;
+        letter-spacing:-1px;
+        font-weight: 500;
+    
+    
+    }
+    #about-two{
+        width: 100%;
+        height: 100%;
+        border-top: 2px solid black;
+        border-left: none;
+        padding: 5vw 20vw;
+       
+    }
+    #about-two h3{
+        font-size: 8vw;
+        font-weight: 400;
+    }
+    #icons{
+        font-size: 10vw;
+    }
      
      
 
