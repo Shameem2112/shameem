@@ -79,9 +79,9 @@ html, body{
 }
 #hero-img {
     flex: 1;
-    background-image: url(img1.jpg);
-    object-fit: contain;
-      background-position: right top;          /* position: top, bottom, left, right, x% y% */
+    background-image:url("https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGNvZGluZ3xlbnwwfHwwfHx8MA%3D%3D");
+    object-fit: cover;
+      background-repeat: no-repeat;         /* no-repeat, repeat-x, repeat-y, repeat */
 
     border-radius: 1vw;
     overflow: hidden;
