@@ -2,547 +2,408 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family:; */
+    font-family: 'Inter', sans-serif;
+    color: #f5f5f5;
 }
 html, body{
     height: 100%;
     width: 100%;
-
+    background-color: #0a0a0a;
 }
 #main{
     height: 100%;
     width: 100%;
+    padding: 2vw 4vw;
 }
 #nav{
-    position: fixed;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    padding: 1vw 1vh;
-    /* flex-wrap: wrap; */
-
+    justify-content: space-between;
+    padding: 1vw 0;
 }
 #nav h3{
-    background-color: black;
-    color:#fcf9f9;
-    padding: 1vw 2vh;
-    font-size:2vw;
-    border-radius: 5px;
-    margin-left:9vw;
-}
- #nav{
-    letter-spacing: -1px;
-    font-size: 3.5rem;
-}
-#intro{
-    height: 45%;
-    width: 100%;
-    padding: 5vw 6vw;
-}
-#intro h1{
-    font-size: 6vw;
-    letter-spacing: -3px;
-    line-height: 100px;
-
-}
-#place{
-    margin-top: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-#place h3,#place h2{
-    font-size: 30px;
-    font-weight: 600;
-
-}
-#hero-img{
-    height: 70%;
-    width: 100%;
-    background-image: url("img1.jpeg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
-}
-#about{
-    height: 100;
-    width:100% ;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30px;
-    flex-wrap: wrap;
-}
-#about h2{
-    width: 70%;
-    font-size: 40px;
-    line-height: 50px;
-    letter-spacing: -2px;
+    font-size: 1.5vw;
     font-weight: 500;
-
-
 }
-#about-two{
-    width: 30%;
-    height: 100%;
-    border-left: 2px solid black;
-    padding: 0 40px;
+#hero {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-#about-two h3{
-    font-size: 30px;
-    font-weight: 400;
-}
-#icons a {
-    font-size: 40px;
-    text-decoration: none;
-    color: #000;
-}
-#icons a:hover{
-    color:gray;
-}
-
-#work{
-    height: 55;
-    width: 100;
-    border-top:2px solid black ;
-    display: flex;
-    padding:50px 60px;
-}
-#work-one{
-    width: 25vw;
-    border-right:2px solid black ;
-    display: flex;
-    padding-right:1vw;
-    justify-content: space-between;
-    
-    
-}
-#work-one h3{
-    font-size: 1.3em;
-    font-weight: 400;
-}
-#work-one i{
-    font-size: 2em;
-}
-
-#work-two{
-    width: 65vw;
-    padding: 0 60px;
-}
-    
-.work2-part{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px 0;
-}
-.work2-part:nth-child(1){
-    border-bottom: 2px solid black;
-}
-.work2-part .elem{
-    width: 50%;
-    height: 50%;
-}
-.work2-part .elem:nth-child(1){
-    border-right: 2px solid #000;
-    padding-right: 50px;
-}
-.work2-part .elem:nth-child(2){
-    padding-left: 50px;
-}
-.work2-part .elem h4{
-    font-size: 25px;
-    margin-bottom: 10px;
-    font-weight: 500;
-
-}
-.work2-part .elem p{
-    font-size: 20px;
-    font-weight: 400;
-}
-#code{
-    height: 10%;
-    width: 100%;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    margin-top: 2%;
-    margin-bottom: 2%;
-
-}
-#code1{
-    font-size: 50px;
-    animation: move 2s  linear infinite ;
-}
-#technical{
-    margin-top: 2%;
-    height: 10%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 2px solid black;
-    
-}
-#technical h4{
-    font-size: 30px;
-    padding-right: 20px;
-    width: 20%;
-    padding-left: 20px;
-}
-#technical-skill{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 23px;
-    font-weight: 100;
-    width: 80%;
-    padding-left: 15px;
-    border-left: 2px solid black;
-
-}
-#education{
-    height: 40;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-#education h3{
-    width: 30%;
-    font-size: 30px;
-    padding: 40px 20px;
-}
-#educations{
-    border-left: 2px solid black;
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    padding: 50px 100px;
+    height: 80vh;
+    margin-top: 2vw;
     gap: 4vw;
 }
-#educations h4{
-    font-size: 25px;
-    font-weight: 500;
+#intro {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-
-p{
-    font-size: 20px;
+#intro h4 {
+    font-size: 1.5vw;
+    font-weight: 400;
+    margin-bottom: 1vw;
+    color: #888;
 }
-@keyframes move {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-200px); /* Adjust the value to the distance you want to move */
-    }
-  }
- #footer{
-    height: 30;
-    width: 100%;
-    position:relative ;
-    border-top: 2px solid #000;
-    margin-top: 1em;
+#intro h1 {
+    font-size: 5vw;
+    line-height: 1;
+    margin-bottom: 2vw;
+    letter-spacing: -0.1vw;
+}
+#hero-content {
+    display: flex;
+    justify-content: space-between;
+}
+#hero-content p {
+    width: 60%;
+    font-size: 1.2vw;
+    line-height: 1.6;
+    color: #ccc;
+}
+#place {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+#place h3 {
+    font-size: 1.2vw;
+    font-weight: 400;
+    margin-bottom: 0.5vw;
+}
+#place h2 {
+    font-size: 1.2vw;
+    font-weight: 400;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background-color: #000;
-    color: #fff;
-    
-    
+    gap: 0.5vw;
+}
+#hero-img {
+    flex: 1;
+    background-image: url(img1.jpg);
+    object-fit: contain;
+      background-position: right top;          /* position: top, bottom, left, right, x% y% */
 
- }
- #footer1{
-    height: 30%;
-    width: 70%;
-    border-right: 2px solid #fff;
-    
- }
- #footer1 h3{
-    font-size: 3em;
- }
-
- #form{
-    display: inline-block;
-    margin-top: 1.5vw;
+    border-radius: 1vw;
+    overflow: hidden;
+}
+#content-section {
     display: flex;
-    align-items:flex-start;
+    margin-top: 8vw;
+    gap: 4vw;
+}
+#left-column {
+    flex: 1;
+}
+#right-column {
+    flex: 1;
+}
+#about {
+    margin-bottom: 4vw;
+}
+#about h3 {
+    font-size: 1.2vw;
+    font-weight: 400;
+    margin-bottom: 1vw;
+    color: #888;
+}
+#about h2 {
+    font-size: 1.8vw;
+    line-height: 1.4;
+    margin-bottom: 2vw;
+    font-weight: 400;
+}
+#about-two {
+    display: flex;
     justify-content: space-between;
-    gap: 1vw;
-    flex-direction:column ; 
-    margin-left: 1vw;
-    font-size:1vw;
+    align-items: center;
+}
+#about-two h3 {
+    font-size: 1.2vw;
+    font-weight: 400;
+}
+#icons {
+    display: flex;
+    gap: 1.5vw;
+}
+#icons a {
+    font-size: 1.8vw;
+    color: #f5f5f5;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+#icons a:hover {
+    color: #888;
+}
+#technical {
+    margin-bottom: 4vw;
+}
+#technical h3 {
+    font-size: 1.5vw;
+    font-weight: 400;
+    margin-bottom: 1.5vw;
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+#technical-skill {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5vw;
+}
+#technical-skill h4 {
+    font-size: 1.2vw;
+    font-weight: 400;
+    padding: 0.8vw 1.5vw;
+    background-color: #1a1a1a;
+    border-radius: 2vw;
+}
+#work-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2vw;
+}
+#work-header h3 {
+    font-size: 1.2vw;
+    font-weight: 400;
+    color: #888;
+}
+#work-header i {
+    font-size: 1.5vw;
+}
+#work-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+}
+.work-item {
+    padding: 1.5vw;
+    background-color: #1a1a1a;
+    border-radius: 1vw;
+}
+.work-item h4 {
+    font-size: 1.3vw;
     font-weight: 500;
-
- }
- input{
-    font-size: 2em;
- }
- textarea{
-    font-size: 2.6em;
-
- }
- #submitBtn{
-    font-size: 2em;
-    margin-left: 4em;
-    background-color: #fff;
-    
- }
- #footer2{
-    gap: 1em;
-    margin: 2em;
+    margin-bottom: 0.5vw;
+}
+.work-item p {
+    font-size: 1.1vw;
+    line-height: 1.4;
+    color: #ccc;
+}
+#education {
+    margin-top: 4vw;
+}
+#education h3 {
+    font-size: 1.5vw;
+    font-weight: 400;
+    margin-bottom: 2vw;
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+.education-item {
+    margin-bottom: 2vw;
+    padding-bottom: 2vw;
+    border-bottom: 1px solid #333;
+}
+.education-item:last-child {
+    border-bottom: none;
+}
+.education-item h4 {
+    font-size: 1.3vw;
+    font-weight: 500;
+    margin-bottom: 0.5vw;
+}
+.education-item p {
+    font-size: 1.1vw;
+    color: #ccc;
+}
+#footer {
+    margin-top: 8vw;
+    padding-top: 4vw;
+    border-top: 1px solid #333;
+    display: flex;
+    gap: 4vw;
+}
+#footer-content {
+    flex: 2;
+}
+#footer-content h3 {
+    font-size: 2.5vw;
+    font-weight: 400;
+    margin-bottom: 2vw;
+}
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+}
+#form input, #form textarea {
+    background-color: #1a1a1a;
+    border: none;
+    padding: 1vw;
+    font-size: 1.1vw;
+    border-radius: 0.5vw;
+}
+#form textarea {
+    height: 10vw;
+    resize: vertical;
+}
+#submitBtn {
+    background-color: #f5f5f5;
+    color: #0a0a0a;
+    border: none;
+    padding: 1vw 2vw;
+    font-size: 1.1vw;
+    border-radius: 2vw;
+    cursor: pointer;
+    width: fit-content;
+    transition: background-color 0.3s;
+}
+#submitBtn:hover {
+    background-color: #ccc;
+}
+#contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1.5vw;
+}
+#contact-info h3, #contact-info a {
+    font-size: 1.2vw;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 0.8vw;
+}
+#contact-info a {
     text-decoration: none;
-    font-size: 2em;
- }
- #footer2 a{
-    text-decoration: none;
-    color: #fff;
- }
- #footer2 a:hover{
-    color: gray;
- }
-  
+    transition: color 0.3s;
+}
+#contact-info a:hover {
+    color: #888;
+}
 
-
-
-
- @media only screen and (max-width: 600px) {
-    .education{
-        border-bottom: 2px solid black;
-        width: 100%;
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    #main {
+        padding: 4vw;
     }
-
-    #nav {
-        width: 100%;
-        height: 8vw;
-        display: flex;
-        justify-content: flex-start;
-        
-    }
-    #nav h3{
+    #nav h3 {
         font-size: 4vw;
-        display: none;
     }
-    #intro h1{
-        font-size: 6vw;
-        letter-spacing: -1px;
-        line-height: 55px;
-        margin-top: 2vw;
-    
-    }
-    #place h3,#place h2{
-        font-size:5vw;
-        font-weight: 600;
-    
-    }
-    #place{
-        margin-top:5vw;
-        display: flex;
-        align-items: center;
-        justify-content:flex-start;
-    }
-    #place h2{
-        margin-left: 18vw;
-    }
-    #hero-img{
-        height: 70%;
-        width: 100%;
-        background-image: url("https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29tcHV0ZXJ8ZW58MHx8MHx8fDA%3D");
-        /* background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100% 100%; */
-        object-fit: cover;
-        filter:drop-shadow(1px 1px 20px rgb(12, 12, 12));
-    }
-    #intro{
-        height:28%;
-    }
-    #work{
-        /* height: 30%; */
-        width: 100vw;
+    #hero {
         flex-direction: column;
+        height: auto;
+        gap: 8vw;
     }
-    #work-one h3{
-        font-size:8vw;
-        font-weight: 400;
+    #intro h4 {
+        font-size: 4vw;
     }
-    #work-one i{
-        font-size:6.3vw;
-        display: none;
-    }
-    #work-one{
-        border-right: none;
-        border-bottom: 2px solid black;
-        width: 100%;
-    }
-    #work{
-        width: 100%;
-        border-top:2px solid black ;
-        padding:1vw 2vw;
-    }
-    #work-two{
-        padding: 0;
-        width: 100%;
-    }
-    .work2-part{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding:1vw 0;
-        flex-wrap: wrap;
-    }
-    .work2-part:nth-child(1){
-        border-bottom: 2px solid #000;
-    }
-    .work2-part .elem{
-        width: 100%;
-        height: 100%;
-    }
-    
-    .work2-part .elem:nth-child(1){
-        border-right:none;
-        padding-right:30vw;
-        border-bottom: 2px solid black;
-
-    }
-    .work2-part .elem:nth-child(2){
-        padding-left: 1vw;
-    }
-    .work2-part .elem h4{
-        font-size: 7vw;
-        margin-bottom: 10px;
-        font-weight: 500;
-    
-    }
-    .work2-part .elem p{
-        font-size: 5vw;
-        font-weight: 400;
-    }
-    #code1{
-        font-size: 6vw;
-    }
-    #technical{
-        flex-direction: column;
-        height:45%;
-    }
-    #technical h4{
-        font-size: 9vw;
-        width: 100%;
-        justify-content: flex-start;
-        
-    
-    }
-    #down{
-        display: block;
-        text-align: center;
-    }
-    #side{
-        display: none;
-    }
-    #technical-skill{
-        flex-direction: column;
-        gap: 1vw;
-        justify-content: flex-start;
-        gap: 2vw;
-        border: none;
-        width: 100%;
-    }
-    #education{
-        
-        flex-direction: column;
-    }
-    #education h3{
-        width: 100%;
-        font-size: 8vw;
-        padding:1vw 2vw;
-        font-weight: 700;
-    }
-    #education h3 i{
-        display: none;
-    }
-    #educations{
-        border-left:none;
-        
-        flex-direction: column;
-        padding:10vw 2vw;
-        width: 100%;
-        
-    }
-    #educations h4{
-        font-size: 6vw;
-        font-weight: 500;
-    }
-    
-    p{
-        font-size:5vw;
-    }
-    
-    #footer{
-        flex-direction: column;
-    }
-    #footer1{
-        width: 100%;
-        border-right: none;
-        
-     }
-     #form{
-        display: inline-block;
-        margin-top: 1.5vw;
-        display: flex;
-        align-items:flex-start;
-        justify-content: space-between;
-        gap: 1vw;
-        flex-direction:column ; 
-        margin-left: 1vw;
-        font-size:3vw;
-        font-weight: 500;
-    
-     }
-     
-     textarea{
-        font-size:6.5vw;
-    
-     }
-     #footer2{
-        gap: 1em;
-        margin: 2em;
-        text-decoration: none;
-        font-size: 5vw;
-     }
-     #about{
-     flex-direction: column;
-    }
-    #about h2{
-        width:100%;
-        font-size:5vw;
-        line-height:10vw;
-        letter-spacing:-1px;
-        font-weight: 500;
-    
-    
-    }
-    #about-two{
-        width: 100%;
-        height: 100%;
-        border-top: 2px solid black;
-        border-left: none;
-        padding: 5vw 20vw;
-       
-    }
-    #about-two h3{
-        font-size: 8vw;
-        font-weight: 400;
-    }
-    #icons{
+    #intro h1 {
         font-size: 10vw;
     }
-     
-     
-
- }
-
-  
-  
+    #hero-content {
+        flex-direction: column;
+        gap: 5vw;
+    }
+    #hero-content p {
+        width: 100%;
+        font-size: 4vw;
+    }
+    #place {
+        align-items: flex-start;
+    }
+    #place h3, #place h2 {
+        font-size: 4vw;
+    }
+    #hero-img {
+        height: 50vh;
+    }
+    #content-section {
+        flex-direction: column;
+        gap: 8vw;
+    }
+    #about h3 {
+        font-size: 4vw;
+    }
+    #about h2 {
+        font-size: 4.5vw;
+    }
+    #about-two {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4vw;
+    }
+    #about-two h3 {
+        font-size: 4vw;
+    }
+    #icons {
+        gap: 5vw;
+    }
+    #icons a {
+        font-size: 6vw;
+    }
+    #technical h3 {
+        font-size: 4.5vw;
+    }
+    #technical-skill {
+        gap: 3vw;
+    }
+    #technical-skill h4 {
+        font-size: 3.5vw;
+        padding: 2vw 4vw;
+    }
+    #work-header h3 {
+        font-size: 4vw;
+    }
+    #work-header i {
+        font-size: 4.5vw;
+    }
+    #work-content {
+        grid-template-columns: 1fr;
+        gap: 4vw;
+    }
+    .work-item {
+        padding: 5vw;
+    }
+    .work-item h4 {
+        font-size: 4.5vw;
+    }
+    .work-item p {
+        font-size: 4vw;
+    }
+    #education h3 {
+        font-size: 4.5vw;
+    }
+    .education-item h4 {
+        font-size: 4.5vw;
+    }
+    .education-item p {
+        font-size: 4vw;
+    }
+    #footer {
+        flex-direction: column;
+        gap: 8vw;
+    }
+    #footer-content h3 {
+        font-size: 6vw;
+    }
+    #form input, #form textarea {
+        padding: 3vw;
+        font-size: 4vw;
+    }
+    #form textarea {
+        height: 30vw;
+    }
+    #submitBtn {
+        padding: 3vw 6vw;
+        font-size: 4vw;
+    }
+    #contact-info h3, #contact-info a {
+        font-size: 4vw;
+        gap: 3vw;
+    }
+}
