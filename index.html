@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shameem — Full Stack Developer</title>
+  <meta name="description" content="Portfolio of Shameem — full stack developer passionate about building efficient, user-friendly, and scalable web applications." />
+  <meta name="keywords" content="full stack developer, web developer, react, node.js, mongodb, javascript, portfolio" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Shameem — Full Stack Developer" />
+  <meta property="og:description" content="Transforming ideas into functional websites—clean code, responsive design, and engaging user experiences." />
+  <meta property="og:image" content="assets/images/og-image.svg" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shameem — Full Stack Developer" />
+  <meta name="twitter:description" content="Transforming ideas into functional websites—clean code, responsive design, and engaging user experiences." />
+  <meta name="twitter:image" content="assets/images/og-image.svg" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://shameemkhan.netlify.app" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shameem",
+    "givenName": "Shameem",
+    "familyName": "Khan",
+    "jobTitle": "Full Stack Developer",
+    "url": "https://shameemkhan.netlify.app",
+    "sameAs": [
+      "https://github.com/Shameem2112",
+      "https://www.linkedin.com/in/shameem-zahoorul-243a5324a",
+      "https://www.instagram.com/me.shameem_pathan"
+    ],
+    "knowsAbout": ["Full-Stack Development", "Web Development", "React", "Node.js", "JavaScript", "MongoDB", "Java", "Python"],
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Dr. Akhilesh Das Gupta Institute of Professional Studies"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Guru Tegh Bahadur Polytechnic Institute"
+      }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Delhi",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+</head>
+<body>
+
+  <!-- ===================== LOADING SCREEN ===================== -->
+  <div id="loader" class="loader" role="status" aria-label="Loading">
+    <div class="loader__container">
+      <div class="loader__ring"></div>
+      <div class="loader__ring loader__ring--inner"></div>
+      <div class="loader__logo">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <path d="M20 4L36 12V28L20 36L4 28V12L20 4Z" stroke="#4F46E5" stroke-width="2" fill="none"/>
+          <path d="M20 10L28 14.5V23.5L20 28L12 23.5V14.5L20 10Z" fill="#4F46E5" opacity="0.3"/>
+        </svg>
+      </div>
+    </div>
+    <div class="loader__progress" aria-hidden="true">
+      <div class="loader__progress-bar" id="loaderProgress"></div>
+    </div>
+    <span class="loader__percent" id="loaderPercent">0%</span>
+  </div>
+
+  <!-- ===================== CUSTOM CURSOR ===================== -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"></div>
+    <div class="cursor__label" id="cursorLabel"></div>
+  </div>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <header class="nav" id="nav" role="banner">
+    <div class="nav__scroll-progress" id="scrollProgress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo" aria-label="Home">
+        <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+          <path d="M20 4L36 12V28L20 36L4 28V12L20 4Z" stroke="#4F46E5" stroke-width="2" fill="none"/>
+          <path d="M20 10L28 14.5V23.5L20 28L12 23.5V14.5L20 10Z" fill="#4F46E5" opacity="0.3"/>
+        </svg>
+        <span>Shameem</span>
+      </a>
+      <nav class="nav__links" id="navLinks" role="navigation" aria-label="Main navigation">
+        <a href="#about" class="nav__link" data-nav>About</a>
+        <a href="#skills" class="nav__link" data-nav>Skills</a>
+        <a href="#projects" class="nav__link" data-nav>Projects</a>
+        <a href="#contact" class="nav__link" data-nav>Contact</a>
+        <a href="resume/resume.pdf" class="nav__link nav__link--resume" target="_blank" rel="noopener" data-nav>Resume</a>
+      </nav>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================== HERO SECTION ===================== -->
+  <section id="hero" class="hero section" data-section>
+    <div class="hero__bg" id="heroBg" aria-hidden="true">
+      <canvas id="particleCanvas"></canvas>
+      <div class="hero__gradient"></div>
+      <div class="hero__orb hero__orb--1"></div>
+      <div class="hero__orb hero__orb--2"></div>
+      <div class="hero__orb hero__orb--3"></div>
+    </div>
+
+    <div class="hero__content">
+      <span class="hero__badge" data-reveal>Available for opportunities</span>
+      <h1 class="hero__title" data-reveal>
+        <span class="hero__title-line" data-split>Hi, I'm</span>
+        <span class="hero__title-line hero__title-line--highlight" data-split>Shameem</span>
+      </h1>
+      <p class="hero__subtitle" data-reveal>
+        <span class="hero__subtitle-text" data-typed>Full Stack Developer</span>
+      </p>
+      <p class="hero__description" data-reveal>
+        Transforming ideas into functional websites—clean code, responsive design, and engaging user experiences. Based in Delhi, India, crafting solutions that make a difference.
+      </p>
+      <div class="hero__actions" data-reveal>
+        <a href="#projects" class="btn btn--primary magnetic" data-magnetic>
+          <span class="btn__text">View My Work</span>
+          <span class="btn__glow"></span>
+          <span class="btn__ripple"></span>
+        </a>
+        <a href="resume/resume.pdf" class="btn btn--outline magnetic" data-magnetic target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Resume
+          <span class="btn__glow"></span>
+          <span class="btn__ripple"></span>
+        </a>
+      </div>
+      <div class="hero__socials" data-reveal>
+        <a href="https://github.com/Shameem2112" target="_blank" rel="noopener" class="hero__social magnetic" data-magnetic aria-label="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/shameem-zahoorul-243a5324a" target="_blank" rel="noopener" class="hero__social magnetic" data-magnetic aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/me.shameem_pathan" target="_blank" rel="noopener" class="hero__social magnetic" data-magnetic aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </a>
+        <a href="mailto:shamem211204@gmail.com" class="hero__social magnetic" data-magnetic aria-label="Email">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+      <div class="hero__scroll-indicator" data-reveal>
+        <span>Scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT SECTION ===================== -->
+  <section id="about" class="about section" data-section>
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">About</span>
+        <h2 class="section-title">Crafting the future,<br />one line of code at a time</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="about__grid">
+        <div class="about__content" data-reveal>
+          <p class="about__text">
+            I'm a passionate full stack developer with a strong foundation in <span class="text-gradient">web development</span>, problem-solving, and software engineering. I specialize in building efficient, user-friendly, and scalable applications.
+          </p>
+          <p class="about__text">
+            Currently pursuing my <strong>B.Tech in Computer Science</strong> at Dr. Akhilesh Das Gupta Institute of Professional Studies, I'm continuously learning and working with technologies like React, Node.js, and MongoDB. I also hold a Diploma in Computer Engineering from Guru Tegh Bahadur Polytechnic Institute.
+          </p>
+          <p class="about__text">
+            I believe the best code is clean, maintainable, and solves real problems. When I'm not coding, you'll find me participating in debates, organizing community campaigns, or exploring new technologies to add to my toolkit.
+          </p>
+          <div class="about__stats">
+            <div class="about__stat">
+              <span class="about__stat-number" data-count="22">0</span>
+              <span class="about__stat-label">GitHub Repos</span>
+            </div>
+            <div class="about__stat">
+              <span class="about__stat-number" data-count="10">0</span>
+              <span class="about__stat-label">Technologies</span>
+            </div>
+            <div class="about__stat">
+              <span class="about__stat-number" data-count="3">0</span>
+              <span class="about__stat-label">Certifications</span>
+            </div>
+            <div class="about__stat">
+              <span class="about__stat-number" data-count="4">0</span>
+              <span class="about__stat-label">Achievements</span>
+            </div>
+          </div>
+        </div>
+        <div class="about__image-wrapper" data-reveal>
+          <div class="about__image">
+            <div class="about__image-placeholder">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="about__image-decoration"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS SECTION ===================== -->
+  <section id="skills" class="skills section" data-section>
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">Skills & Expertise</span>
+        <h2 class="section-title">My technical arsenal</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="skills__grid">
+        <div class="skills__category" data-reveal>
+          <div class="skills__category-header">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <h3>Frontend</h3>
+          </div>
+          <div class="skills__tags">
+            <span class="skills__tag">HTML5</span>
+            <span class="skills__tag">CSS3</span>
+            <span class="skills__tag">JavaScript</span>
+            <span class="skills__tag">React</span>
+            <span class="skills__tag">EJS</span>
+            <span class="skills__tag">GSAP</span>
+          </div>
+        </div>
+
+        <div class="skills__category" data-reveal>
+          <div class="skills__category-header">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22D3EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <h3>Backend</h3>
+          </div>
+          <div class="skills__tags">
+            <span class="skills__tag">Node.js</span>
+            <span class="skills__tag">Java</span>
+            <span class="skills__tag">Python</span>
+            <span class="skills__tag">C & C++</span>
+            <span class="skills__tag">REST APIs</span>
+            <span class="skills__tag">EJS</span>
+          </div>
+        </div>
+
+        <div class="skills__category" data-reveal>
+          <div class="skills__category-header">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7v10c0 2 1 3 3 3h10c2 0 3-1 3-3V7c0-2-1-3-3-3H7c-2 0-3 1-3 3z"/></svg>
+            <h3>Database</h3>
+          </div>
+          <div class="skills__tags">
+            <span class="skills__tag">MongoDB</span>
+            <span class="skills__tag">SQL</span>
+            <span class="skills__tag">PostgreSQL</span>
+          </div>
+        </div>
+
+        <div class="skills__category" data-reveal>
+          <div class="skills__category-header">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <h3>Programming</h3>
+          </div>
+          <div class="skills__tags">
+            <span class="skills__tag">Java</span>
+            <span class="skills__tag">Python</span>
+            <span class="skills__tag">JavaScript</span>
+            <span class="skills__tag">TypeScript</span>
+            <span class="skills__tag">C & C++</span>
+          </div>
+        </div>
+
+        <div class="skills__category" data-reveal>
+          <div class="skills__category-header">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FB923C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <h3>Tools & Workflow</h3>
+          </div>
+          <div class="skills__tags">
+            <span class="skills__tag">VS Code</span>
+            <span class="skills__tag">Git</span>
+            <span class="skills__tag">GitHub</span>
+            <span class="skills__tag">Netlify</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== PROJECTS SECTION ===================== -->
+  <section id="projects" class="projects section" data-section>
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">Featured Work</span>
+        <h2 class="section-title">Selected projects that<br />push the boundaries</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="projects__grid" id="projectsGrid">
+        <!-- Project 1: Notification API -->
+        <article class="project-card" data-reveal data-project>
+          <div class="project-card__image">
+            <div class="project-card__image-placeholder" style="background: linear-gradient(135deg, #4F46E5, #22D3EE);">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            </div>
+            <div class="project-card__overlay">
+              <div class="project-card__actions">
+                <a href="https://github.com/Shameem2112/notification_api" class="project-card__btn" target="_blank" rel="noopener">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  Source
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="project-card__tag">TypeScript</span>
+              <span class="project-card__tag">API</span>
+              <span class="project-card__tag">Backend</span>
+            </div>
+            <h3 class="project-card__title">Notification API</h3>
+            <p class="project-card__desc">A TypeScript-based notification API system for handling and managing user notifications efficiently.</p>
+            <div class="project-card__features">
+              <span>✓ TypeScript Implementation</span>
+              <span>✓ Notification Management</span>
+              <span>✓ RESTful API Design</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: CDN Upload Module -->
+        <article class="project-card" data-reveal data-project>
+          <div class="project-card__image">
+            <div class="project-card__image-placeholder" style="background: linear-gradient(135deg, #22D3EE, #A78BFA);">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div class="project-card__overlay">
+              <div class="project-card__actions">
+                <a href="https://github.com/Shameem2112/CDN_upload_module" class="project-card__btn" target="_blank" rel="noopener">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  Source
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="project-card__tag">JavaScript</span>
+              <span class="project-card__tag">CDN</span>
+              <span class="project-card__tag">Upload</span>
+            </div>
+            <h3 class="project-card__title">CDN Upload Module</h3>
+            <p class="project-card__desc">A JavaScript module for uploading and managing content delivery network assets efficiently.</p>
+            <div class="project-card__features">
+              <span>✓ Asset Upload Management</span>
+              <span>✓ CDN Integration</span>
+              <span>✓ JavaScript Module</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Image Gallery -->
+        <article class="project-card" data-reveal data-project>
+          <div class="project-card__image">
+            <div class="project-card__image-placeholder" style="background: linear-gradient(135deg, #A78BFA, #34D399);">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            </div>
+            <div class="project-card__overlay">
+              <div class="project-card__actions">
+                <a href="https://github.com/Shameem2112/image-gallery" class="project-card__btn" target="_blank" rel="noopener">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  Source
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="project-card__tag">JavaScript</span>
+              <span class="project-card__tag">Gallery</span>
+              <span class="project-card__tag">Frontend</span>
+            </div>
+            <h3 class="project-card__title">Image Gallery</h3>
+            <p class="project-card__desc">An interactive JavaScript-based image gallery application for browsing and managing images.</p>
+            <div class="project-card__features">
+              <span>✓ Image Browsing</span>
+              <span>✓ Interactive UI</span>
+              <span>✓ JavaScript Powered</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: Tic Tac Toe -->
+        <article class="project-card" data-reveal data-project>
+          <div class="project-card__image">
+            <div class="project-card__image-placeholder" style="background: linear-gradient(135deg, #FB923C, #4F46E5);">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v6H9z"/><path d="M15 15h6v6h-6z"/><path d="M3 15h6v6H3z"/></svg>
+            </div>
+            <div class="project-card__overlay">
+              <div class="project-card__actions">
+                <a href="https://github.com/Shameem2112/TicTacToe" class="project-card__btn" target="_blank" rel="noopener">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  Source
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="project-card__tag">JavaScript</span>
+              <span class="project-card__tag">Game</span>
+              <span class="project-card__tag">Frontend</span>
+            </div>
+            <h3 class="project-card__title">Tic Tac Toe</h3>
+            <p class="project-card__desc">A classic Tic Tac Toe game built with JavaScript — interactive, responsive, and fun to play.</p>
+            <div class="project-card__features">
+              <span>✓ Two Player Game</span>
+              <span>✓ Interactive UI</span>
+              <span>✓ JavaScript Logic</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GITHUB ACTIVITY ===================== -->
+  <section id="github" class="github section" data-section>
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">Open Source</span>
+        <h2 class="section-title">GitHub activity & contributions</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="github__stats" data-reveal>
+        <div class="github__stat">
+          <span class="github__stat-number" data-count="22">0</span>
+          <span class="github__stat-label">Repositories</span>
+        </div>
+        <div class="github__stat">
+          <span class="github__stat-number" data-count="5">0</span>
+          <span class="github__stat-label">Followers</span>
+        </div>
+        <div class="github__stat">
+          <span class="github__stat-number" data-count="10">0</span>
+          <span class="github__stat-label">Following</span>
+        </div>
+        <div class="github__stat">
+          <span class="github__stat-number" data-count="1">0</span>
+          <span class="github__stat-label">Stars Earned</span>
+        </div>
+        <div class="github__stat">
+          <span class="github__stat-number" data-count="200">0</span>
+          <span class="github__stat-label">Contributions (2025-26)</span>
+        </div>
+      </div>
+      <div class="github__graph" data-reveal>
+        <div class="github__graph-header">
+          <h3>Contribution Activity</h3>
+          <span>Last 52 weeks</span>
+        </div>
+        <div class="github__graph-grid" id="contributionGraph"></div>
+      </div>
+      <div class="github__langs" data-reveal>
+        <h3 class="github__langs-title">Top Languages</h3>
+        <div class="github__langs-bars">
+          <div class="github__lang-bar" data-lang="JavaScript" data-pct="35">
+            <div class="github__lang-info">
+              <span class="github__lang-name">JavaScript</span>
+              <span class="github__lang-pct">35%</span>
+            </div>
+            <div class="github__lang-track">
+              <div class="github__lang-fill" style="--pct: 35%; --color: #F7DF1E;"></div>
+            </div>
+          </div>
+          <div class="github__lang-bar" data-lang="TypeScript" data-pct="20">
+            <div class="github__lang-info">
+              <span class="github__lang-name">TypeScript</span>
+              <span class="github__lang-pct">20%</span>
+            </div>
+            <div class="github__lang-track">
+              <div class="github__lang-fill" style="--pct: 20%; --color: #3178C6;"></div>
+            </div>
+          </div>
+          <div class="github__lang-bar" data-lang="HTML/CSS" data-pct="25">
+            <div class="github__lang-info">
+              <span class="github__lang-name">HTML/CSS</span>
+              <span class="github__lang-pct">25%</span>
+            </div>
+            <div class="github__lang-track">
+              <div class="github__lang-fill" style="--pct: 25%; --color: #E34F26;"></div>
+            </div>
+          </div>
+          <div class="github__lang-bar" data-lang="C++" data-pct="10">
+            <div class="github__lang-info">
+              <span class="github__lang-name">C++</span>
+              <span class="github__lang-pct">10%</span>
+            </div>
+            <div class="github__lang-track">
+              <div class="github__lang-fill" style="--pct: 10%; --color: #00599C;"></div>
+            </div>
+          </div>
+          <div class="github__lang-bar" data-lang="Java" data-pct="10">
+            <div class="github__lang-info">
+              <span class="github__lang-name">Java</span>
+              <span class="github__lang-pct">10%</span>
+            </div>
+            <div class="github__lang-track">
+              <div class="github__lang-fill" style="--pct: 10%; --color: #b07219;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ACHIEVEMENTS ===================== -->
+  <section id="achievements" class="achievements section" data-section>
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">Achievements</span>
+        <h2 class="section-title">Milestones & recognition</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="achievements__grid" data-reveal>
+        <div class="achievement-card">
+          <div class="achievement-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3 class="achievement-card__title">FEA Crescendo Winner</h3>
+          <p class="achievement-card__desc">Winner of the FEA Crescendo contest, competing as a team and showcasing creative and collaborative skills.</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#22D3EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3 class="achievement-card__title">Debate Champion</h3>
+          <p class="achievement-card__desc">Lead a compelling debate on the advantages and disadvantages of mobile phone usage in education.</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="achievement-card__title">Community Campaign</h3>
+          <p class="achievement-card__desc">Organized a campaign for a cleaner society in slums, engaging with a mass of people to create awareness.</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FB923C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3 class="achievement-card__title">Speech at 700+ Audience</h3>
+          <p class="achievement-card__desc">Honoured to present speeches in front of over 700 students at annual school fests throughout my academic journey.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ===================== CONTACT SECTION ===================== -->
+  <section id="contact" class="contact section" data-section>
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">Get in Touch</span>
+        <h2 class="section-title">Let's build something<br />extraordinary together</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="contact__grid">
+        <div class="contact__info" data-reveal>
+          <p class="contact__intro">I'm currently open to freelance opportunities, speaking engagements, and exciting collaborations. Whether you have a project in mind or just want to say hi, I'd love to hear from you.</p>
+          <div class="contact__details">
+            <div class="contact__detail">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>shamem211204@gmail.com</span>
+            </div>
+            <div class="contact__detail">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Delhi, India</span>
+            </div>
+            <div class="contact__detail">
+              <span class="contact__status">
+                <span class="contact__status-dot"></span>
+                Available for hire
+              </span>
+            </div>
+          </div>
+          <div class="contact__socials">
+            <a href="https://github.com/Shameem2112" class="contact__social magnetic" data-magnetic target="_blank" rel="noopener" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/shameem-zahoorul-243a5324a" class="contact__social magnetic" data-magnetic target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/me.shameem_pathan" class="contact__social magnetic" data-magnetic target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+        <form class="contact__form" id="contactForm" action="mailto:shamem211204@gmail.com" method="post" enctype="text/plain" data-reveal novalidate>
+          <div class="contact__field">
+            <input type="text" id="name" class="contact__input" required placeholder=" " />
+            <label for="name" class="contact__label">Your Name</label>
+            <span class="contact__error" data-error="name"></span>
+          </div>
+          <div class="contact__field">
+            <input type="email" id="email" class="contact__input" required placeholder=" " />
+            <label for="email" class="contact__label">Your Email</label>
+            <span class="contact__error" data-error="email"></span>
+          </div>
+          <div class="contact__field">
+            <input type="text" id="subject" class="contact__input" required placeholder=" " />
+            <label for="subject" class="contact__label">Subject</label>
+            <span class="contact__error" data-error="subject"></span>
+          </div>
+          <div class="contact__field contact__field--textarea">
+            <textarea id="message" class="contact__input contact__textarea" required placeholder=" " rows="5"></textarea>
+            <label for="message" class="contact__label">Your Message</label>
+            <span class="contact__error" data-error="message"></span>
+          </div>
+          <button type="submit" class="btn btn--primary contact__submit magnetic" data-magnetic>
+            <span class="btn__text">Send Message</span>
+            <svg class="contact__submit-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            <span class="btn__glow"></span>
+            <span class="btn__ripple"></span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="#hero" class="footer__logo">
+            <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+              <path d="M20 4L36 12V28L20 36L4 28V12L20 4Z" stroke="#4F46E5" stroke-width="2" fill="none"/>
+              <path d="M20 10L28 14.5V23.5L20 28L12 23.5V14.5L20 10Z" fill="#4F46E5" opacity="0.3"/>
+            </svg>
+            <span>Shameem</span>
+          </a>
+          <p class="footer__tagline">Transforming ideas into functional websites—clean code, responsive design, and engaging user experiences.</p>
+        </div>
+        <div class="footer__links">
+          <a href="#about" class="footer__link">About</a>
+          <a href="#skills" class="footer__link">Skills</a>
+          <a href="#projects" class="footer__link">Projects</a>
+          <a href="#contact" class="footer__link">Contact</a>
+        </div>
+        <div class="footer__socials">
+          <a href="https://github.com/Shameem2112" class="footer__social" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/shameem-zahoorul-243a5324a" class="footer__social" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="mailto:shamem211204@gmail.com" class="footer__social" aria-label="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copyright">&copy; 2026 Shameem. All rights reserved.</span>
+        <button class="footer__back-to-top" id="backToTop" aria-label="Back to top">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.19/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/split-type@0.3.4/umd/index.js"></script>
+  <script src="https://unpkg.com/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+
+  <script src="js/cursor.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/loader.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

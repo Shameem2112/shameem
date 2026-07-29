@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Shameem</title>
+  <meta name="description" content="Learn more about Shameem — full stack developer passionate about building efficient, user-friendly, and scalable web applications." />
+  <link rel="canonical" href="https://shameemkhan.netlify.app/about" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <style>
+    .page-hero {
+      padding: 160px 0 80px;
+      text-align: center;
+      position: relative;
+    }
+    .page-hero__title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+    }
+    .page-hero__subtitle {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .about-extended {
+      padding: 0 0 100px;
+    }
+    .about-extended__content {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .about-extended__content p {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      line-height: 1.9;
+      margin-bottom: 24px;
+    }
+    .about-extended__values {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .about-extended__value {
+      padding: 24px;
+      border-radius: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+    }
+    .about-extended__value h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .about-extended__value p {
+      font-size: 0.9rem;
+      margin-bottom: 0;
+    }
+    @media (max-width: 768px) {
+      .about-extended__values {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav nav--scrolled" id="nav">
+    <div class="nav__scroll-progress" id="scrollProgress"></div>
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+          <path d="M20 4L36 12V28L20 36L4 28V12L20 4Z" stroke="#4F46E5" stroke-width="2" fill="none"/>
+          <path d="M20 10L28 14.5V23.5L20 28L12 23.5V14.5L20 10Z" fill="#4F46E5" opacity="0.3"/>
+        </svg>
+        <span>Shameem</span>
+      </a>
+      <nav class="nav__links">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="about.html" class="nav__link nav__link--active">About</a>
+        <a href="projects.html" class="nav__link">Projects</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+        <a href="resume/resume.pdf" class="nav__link nav__link--resume" target="_blank">Resume</a>
+      </nav>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="page-hero__title">About Me</h1>
+        <p class="page-hero__subtitle">From code to impact — my journey in tech</p>
+      </div>
+    </section>
+
+    <section class="about-extended">
+      <div class="container">
+        <div class="about-extended__content">
+          <p>My journey into coding started with curiosity — the desire to understand how websites work and the power to create something from nothing. What began as a hobby quickly became a passion for building functional, user-friendly applications that solve real-world problems.</p>
+          <p>I'm currently pursuing my <strong>B.Tech in Computer Science & Engineering</strong> at Dr. Akhilesh Das Gupta Institute of Professional Studies. My academic journey, combined with a Diploma in Computer Engineering from Guru Tegh Bahadur Polytechnic Institute, has given me a strong foundation in both theoretical and practical aspects of software development.</p>
+          <p>My technical toolkit spans across frontend and backend technologies — from HTML, CSS, and JavaScript to React, Node.js, and MongoDB. I'm constantly exploring new technologies and frameworks to expand my capabilities and build better solutions.</p>
+          <p>Beyond coding, I believe in holistic growth. I've won competitions, led debates, organized community campaigns, and spoken in front of hundreds. These experiences have shaped me into a well-rounded developer who values communication, teamwork, and making a positive impact.</p>
+
+          <div class="about-extended__values">
+            <div class="about-extended__value">
+              <h3>🎯 Clean Code Philosophy</h3>
+              <p>I believe in writing code that is clean, maintainable, and scalable. Good code should be readable by humans first, computers second.</p>
+            </div>
+            <div class="about-extended__value">
+              <h3>🧠 Lifelong Learning</h3>
+              <p>Technology evolves fast. I stay curious and continuously learn new technologies, frameworks, and best practices to stay ahead.</p>
+            </div>
+            <div class="about-extended__value">
+              <h3>🤝 Collaboration First</h3>
+              <p>The best solutions emerge through collaboration. I value teamwork, open communication, and learning from diverse perspectives.</p>
+            </div>
+            <div class="about-extended__value">
+              <h3>🌍 Impact Driven</h3>
+              <p>Technology should serve people. I'm driven by building solutions that make a real difference — from community campaigns to web applications.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom">
+        <span class="footer__copyright">&copy; 2026 Shameem. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shameemkhan.netlify.app/sitemap.xml

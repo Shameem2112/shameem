@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Shameem</title>
+  <meta name="description" content="Read articles by Shameem on web development, programming, and technology." />
+  <link rel="canonical" href="https://shameemkhan.netlify.app/blog" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+</head>
+<body>
+  <header class="nav nav--scrolled" id="nav">
+    <div class="nav__scroll-progress" id="scrollProgress"></div>
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+          <path d="M20 4L36 12V28L20 36L4 28V12L20 4Z" stroke="#4F46E5" stroke-width="2" fill="none"/>
+          <path d="M20 10L28 14.5V23.5L20 28L12 23.5V14.5L20 10Z" fill="#4F46E5" opacity="0.3"/>
+        </svg>
+        <span>Alex Rivera</span>
+      </a>
+      <nav class="nav__links">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="about.html" class="nav__link">About</a>
+        <a href="projects.html" class="nav__link">Projects</a>
+        <a href="blog.html" class="nav__link nav__link--active">Blog</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+      </nav>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section style="padding: 160px 0 80px; text-align: center;">
+      <div class="container">
+        <span style="display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--primary); margin-bottom: 16px; padding: 6px 16px; border: 1px solid rgba(79, 70, 229, 0.2); border-radius: 100px; background: rgba(79, 70, 229, 0.06);">Blog</span>
+        <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 20px;">Thoughts & Insights</h1>
+        <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 500px; margin: 0 auto;">Writing about code, AI, design, and the future of technology.</p>
+      </div>
+    </section>
+
+    <section style="padding-bottom: 100px;">
+      <div class="container">
+        <div class="blog__grid">
+          <article class="blog-card">
+            <div class="blog-card__image">
+              <div class="blog-card__image-placeholder" style="background: linear-gradient(135deg, #4F46E5, #22D3EE);"></div>
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span class="blog-card__date">Coming Soon</span>
+                <span class="blog-card__read">5 min read</span>
+              </div>
+              <h3 class="blog-card__title">Getting Started with React: A Beginner's Guide</h3>
+              <p class="blog-card__desc">A comprehensive introduction to React for beginners — from components and props to state management and hooks.</p>
+              <div class="blog-card__tags">
+                <span class="blog-card__tag">React</span>
+                <span class="blog-card__tag">JavaScript</span>
+                <span class="blog-card__tag">Frontend</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card__image">
+              <div class="blog-card__image-placeholder" style="background: linear-gradient(135deg, #22D3EE, #A78BFA);"></div>
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span class="blog-card__date">Coming Soon</span>
+                <span class="blog-card__read">7 min read</span>
+              </div>
+              <h3 class="blog-card__title">Building REST APIs with Node.js and Express</h3>
+              <p class="blog-card__desc">Learn how to build scalable and well-structured RESTful APIs using Node.js, Express, and MongoDB.</p>
+              <div class="blog-card__tags">
+                <span class="blog-card__tag">Node.js</span>
+                <span class="blog-card__tag">API</span>
+                <span class="blog-card__tag">Backend</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card__image">
+              <div class="blog-card__image-placeholder" style="background: linear-gradient(135deg, #A78BFA, #34D399);"></div>
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span class="blog-card__date">Coming Soon</span>
+                <span class="blog-card__read">6 min read</span>
+              </div>
+              <h3 class="blog-card__title">Understanding MongoDB: From Basics to Advanced</h3>
+              <p class="blog-card__desc">A complete guide to MongoDB covering CRUD operations, aggregation pipelines, indexing, and best practices.</p>
+              <div class="blog-card__tags">
+                <span class="blog-card__tag">MongoDB</span>
+                <span class="blog-card__tag">Database</span>
+                <span class="blog-card__tag">Backend</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card__image">
+              <div class="blog-card__image-placeholder" style="background: linear-gradient(135deg, #FB923C, #4F46E5);"></div>
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span class="blog-card__date">Coming Soon</span>
+                <span class="blog-card__read">8 min read</span>
+              </div>
+              <h3 class="blog-card__title">JavaScript Fundamentals Every Developer Should Know</h3>
+              <p class="blog-card__desc">Essential JavaScript concepts — closures, promises, async/await, prototypes, and modern ES6+ features explained clearly.</p>
+              <div class="blog-card__tags">
+                <span class="blog-card__tag">JavaScript</span>
+                <span class="blog-card__tag">Fundamentals</span>
+                <span class="blog-card__tag">Web</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card__image">
+              <div class="blog-card__image-placeholder" style="background: linear-gradient(135deg, #34D399, #22D3EE);"></div>
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span class="blog-card__date">Coming Soon</span>
+                <span class="blog-card__read">5 min read</span>
+              </div>
+              <h3 class="blog-card__title">Version Control with Git: A Practical Guide</h3>
+              <p class="blog-card__desc">Master Git from basics to advanced workflows — branching, merging, rebasing, and collaborating with GitHub.</p>
+              <div class="blog-card__tags">
+                <span class="blog-card__tag">Git</span>
+                <span class="blog-card__tag">GitHub</span>
+                <span class="blog-card__tag">DevOps</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card__image">
+              <div class="blog-card__image-placeholder" style="background: linear-gradient(135deg, #4F46E5, #FB923C);"></div>
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span class="blog-card__date">Coming Soon</span>
+                <span class="blog-card__read">4 min read</span>
+              </div>
+              <h3 class="blog-card__title">My Journey into Full Stack Development</h3>
+              <p class="blog-card__desc">How I started coding, the challenges I faced, and the path that led me to become a full stack developer.</p>
+              <div class="blog-card__tags">
+                <span class="blog-card__tag">Career</span>
+                <span class="blog-card__tag">Learning</span>
+                <span class="blog-card__tag">Journey</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom">
+        <span class="footer__copyright">&copy; 2026 Alex Rivera. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/navigation.js"></script>
+</body>
+</html>
